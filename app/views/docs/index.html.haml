@@ -1,2 +1,4 @@
-%h1 Docs#index
-%p Find me in app/views/docs/index.html.haml
+- @docs.each do |doc|
+	%h1= link_to doc.title
+	%p= time_ago_in_words(doc.created_at)  + ' ago'
+	%p= truncate(doc.content, length: 50)
