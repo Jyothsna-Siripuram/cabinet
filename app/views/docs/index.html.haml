@@ -1,4 +1,6 @@
 - @docs.each do |doc|
-	%h1= link_to doc.title
+	%h1= link_to doc.title, doc_path(doc)
 	%p= time_ago_in_words(doc.created_at)  + ' ago'
 	%p= truncate(doc.content, length: 50)
+
+= link_to "Create Doc", new_doc_path

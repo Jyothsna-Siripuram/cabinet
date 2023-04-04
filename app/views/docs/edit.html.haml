@@ -1,2 +1,3 @@
-%h1 Docs#edit
-%p Find me in app/views/docs/edit.html.haml
+%h1 Edit Doc
+= render 'form'
+= link_to 'Cancel', doc_path(@doc)
